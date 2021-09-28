@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies Catalog</title>
+    <link rel="stylesheet" href="../static/css/fontawesome-all.min.css">                                      <!-- Font awesome -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+    </style>
+
+</head>
+<body>
+    <nav class="navbar">
+        <a>
+            <img src="logo.png" alt="" class="logo">
+        </a>
+        <h1>
+            Film Catalog
+        </h1>
+    </nav>
+
+    <hr id="linha1"></hr>
+
+    <section id="novofilme">
+        <h2>Novo Filme</h2>
+        <img src="popcorn.png" alt="" class="popcorn">
+
+        <div id="card">
+
+            <form id="js-form">
+
+                <div id="label">
+                    <input type="text" name="titulo" id="titulo" placeholder="Digite o nome do filme">
+                    <label for="titulo">Título</label>
+                </div>
+
+                <div id="label">
+                    <input type="text" name="imagem" id="imagem" placeholder="Digite a url da imagem">
+                    <label for="titulo">Imagem</label>
+                </div>
+
+                <div id="label">
+                    <input type="text" name="genero" id="genero" placeholder="Digite o gênero do filme">
+                    <label for="titulo">Gênero</label>
+                </div>
+
+                <div id="label">
+                    <input type="text" name="nota" id="nota" placeholder="Digite uma nota de 0 a 10">
+                    <label for="titulo">Nota</label>
+                </div>
+
+                <div id="botao">
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <hr>
+        <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script>All rights reserved  | <a target="_blank" href="https://portfoliossympson.herokuapp.com/">SS Developer</a> &copy;<i class="fa fa-heart" aria-hidden="true"></i></p>
+        
+    </footer>
+
+
+
+</body>
+</html>
