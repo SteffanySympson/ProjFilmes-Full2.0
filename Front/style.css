@@ -1,4 +1,4 @@
-/* Padrão Geral */
+/* PADRÃO GERAL DA PG */
 
 *{
     margin: 0;
@@ -16,7 +16,7 @@ html, body {
     background: linear-gradient(to bottom, #ffffff, #b9b9b9, #777777, #3b3b3b, #000000);
 }
 
-/* Estilo da página */
+/* ESTILO DO TOPO DA PÁGINA */
 
 nav{
     background: #000000;
@@ -49,6 +49,9 @@ nav h1{
     padding: 2rem; 
 }
 
+
+/*ESTILIZAÇÃO DA SEÇÃO DE INPUT DE UM NOVO FILME*/
+
 section#novofilme{
     width: 100%;
 }
@@ -70,12 +73,10 @@ section#novofilme h2{
     display: flex;
     margin: 10px auto 30px;
     max-width: 500px;
-    /* flex-wrap: wrap; */
-    /* position: relative; */
     align-items: center;
-    display: flex;
 }
 
+/* IMAGEM DO BALDINHO DE PIPOCA */
 .popcorn{
     /* bottom: 0;
     right: 0; */
@@ -86,6 +87,7 @@ section#novofilme h2{
     position: relative; */
 }
 
+/*ESTILIZAÇÃ DO INPUT */
 .input{
     box-sizing: border-box;
     display:block;
@@ -102,17 +104,9 @@ section#novofilme h2{
 }
 
 
+/* ESTILIZAÇÃO DO BOTÃO ENVIAR */
 
-#rodape{
-    text-align: center;
-    background: #000000;
-    color: white;
-    font-size: 1rem;
-    width: 100%;
-    padding: 2rem;
-}
-
-.btn {
+.btnSend {
     background: #000000;
     background-image: -webkit-linear-gradient(top, #000000, #737373);
     background-image: -moz-linear-gradient(top, #000000, #737373);
@@ -132,18 +126,115 @@ section#novofilme h2{
     border: solid #d4c5d4 2px;
     /* text-decoration: none; */
     justify-content: center;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+  
+.btnSend:hover {
+    background: #9c0000;
+    text-decoration: none;
+  }
+
+/*ESTILIZAÇÃO DOS CARDS*/
+
+.imgDoCard {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+}
+  
+.btn {
+    color: #ffffff;
+    padding: 0.8rem;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-weight: 400;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
 }
   
 .btn:hover {
-    background: #3cb0fd;
-    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
-    text-decoration: none;
-  }
+    background-color: rgba(255, 255, 255, 0.12);
+}
+  
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+  
+.cards_item {
+    display: flex;
+    padding: 1rem;
+}
+  
+@media (min-width: 40rem) {
+    .cards_item {
+      width: 50%;
+    }
+}
+  
+@media (min-width: 56rem) {
+    .cards_item {
+      width: 33.3333%;
+    }
+}
+  
+.card {
+    background-color: white;
+    border-radius: 0.25rem;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+  
+.card_content {
+    padding: 1rem;
+    background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
+}
+  
+.card_title {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    margin: 0px;
+ }
+  
+.card_text {
+    color: #ffffff;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;    
+    font-weight: 400;
+}
+
+.made_by{
+    font-weight: 400;
+    font-size: 13px;
+    margin-top: 35px;
+    text-align: center;
+}
+
+
+/* ESTILIZAÇÃO DO FOOTER  */
+
+#rodape{
+    text-align: center;
+    background: #000000;
+    color: white;
+    font-size: 1rem;
+    width: 100%;
+    padding: 2rem;
+}
+
 
 footer i {
 	color: #d32a2a;
