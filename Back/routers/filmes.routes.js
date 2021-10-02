@@ -5,7 +5,7 @@ const filmes = [ //pre cadastro de um filme pra gente testar o metodo get
     {
         id: Date.now(),
         imagem: "https://nossaciencia.com.br/wp-content/uploads/2019/05/gera%C3%A7%C3%A3o-matrix.png",
-        titulo: "Matrix",
+        titulo: " Teste Matrix",
         nota: "10",
         genero: "Ficção Científica",
         sinopse: "Um jovem programador é atormentado por estranhos pesadelos nos quais sempre está conectado por cabos a um imenso sistema de computadores do futuro. À medida que o sonho se repete, ele começa a levantar dúvidas sobre a realidade. E quando encontra os misteriosos Morpheus e Trinity, ele descobre que é vítima do Matrix, um sistema inteligente e artificial que manipula a mente das pessoas e cria a ilusão de um mundo real enquanto usa os cérebros e corpos dos indivíduos para produzir energia."

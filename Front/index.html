@@ -24,7 +24,7 @@
 
     <section id="novofilme">
         <h2>Novo Filme</h2>
-        
+        <div>
         <div class="container">
             <img src="popcorn.png" alt="" class="popcorn">
             <form onsubmit="submitForm(event)" id="js-form">
@@ -59,11 +59,12 @@
                 </div>
             </form>
         </div>
+        </div>
     </section>
     <section>
         <div class="main">
             <ul class="cards" id="lista">
-                <li class="cards_item">
+                <!-- <li class="cards_item">
                     <div class="card">
                         <div class="card_image"><img class="imgDoCard" src="${filme.imagem}"></div>
                         <div class="card_content">
@@ -72,11 +73,11 @@
                         <p class="card_text">${filme.genero}</p>
                         <p class="card_text">${filme.sinopse}</p>
                         
-                        <button class="btn card_btn">Editar</button>
-                        <button class="btn card_btn">Excluir</button>
+                        <button class="btn card_btn" onclick="putFilme(${filme.id})">Editar </button>
+                        <button class="btn card_btn" onclick="deleteFilme(${filme.id})">Excluir </button>
                         </div>
                     </div>
-                </li>
+                </li> -->
             </ul>
         </div>
     </section> 
