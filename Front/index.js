@@ -66,7 +66,8 @@ const submitForm = async (evento) => {
         const request = new Request(`${urlApi}/add`, { //usa a constante urlApi que foi definida globalmente (http://localhost:3000/filmes) e completa apenas com o /add pra definir que estamos realizando a adição de um novo filme.
             method: 'POST', //definição do método da equisição, POST.
             body: JSON.stringify(filme), //Coloca em formato json e rendezina no corpo/tela.
-            headers: new Headers({ 'Content-Type': 'application/json'})
+            headers: new Headers({ 
+                'Content-Type': 'application/json'})
         })
 
         const response = await fetch(request);
