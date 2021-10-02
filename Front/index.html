@@ -7,7 +7,6 @@
     <title>Movies Catalog</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./font-awesome.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
@@ -28,44 +27,59 @@
         
         <div class="container">
             <img src="popcorn.png" alt="" class="popcorn">
-            <form id="js-form">
-
-                <div >
-                    <label for="titulo">Título</label>
-                    <input class="input" type="text" name="titulo" id="titulo" placeholder="Digite o nome do filme">
-                    
-                </div>
+            <form onsubmit="submitForm(event)" id="js-form">
 
                 <div >
                     <label for="titulo">Imagem</label>
-                    <input class="input" type="text" name="imagem" id="imagem" placeholder="Digite a url da imagem">
-                    
+                    <input class="input" required type="text" name="imagem" id="imagem" placeholder="Digite a url da imagem">
                 </div>
 
                 <div >
-                    <label for="titulo">Sinopse</label>
-                    <input class="input" type="text" name="sinopse" id="sinopse " placeholder="Digite a Sinopse ">
-                    
-                </div>
-
-                <div >
-                    <label for="titulo">Gênero</label>
-                    <input class="input" type="text" name="genero" id="genero" placeholder="Digite o gênero do filme">
-                    
+                    <label for="titulo">Título</label>
+                    <input class="input" required type="text" name="titulo" id="titulo" placeholder="Digite o nome do filme">
                 </div>
 
                 <div >
                     <label for="titulo">Nota</label>
-                    <input class="input" type="text" name="nota" id="nota" placeholder="Digite uma nota de 0 a 10">
-                    
+                    <input class="input" required type="text" name="nota" id="nota" placeholder="Digite uma nota de 0 a 10">
+                </div>
+                
+                <div >
+                    <label for="titulo">Gênero</label>
+                    <input class="input"  required type="text" name="genero" id="genero" placeholder="Digite o gênero do filme">
                 </div>
 
-                <div >
+                <div>
+                    <label for="titulo">Sinopse</label>
+                    <input class="input"  required type="text" name="sinopse" id="sinopse " placeholder="Digite a Sinopse ">
+                </div>
+
+                <div class="row" >
                     <button class="btnSend" type="submit">Enviar</button>
                 </div>
             </form>
         </div>
     </section>
+    <section>
+        <div class="main">
+            <ul class="cards" id="lista">
+                <li class="cards_item">
+                    <div class="card">
+                        <div class="card_image"><img class="imgDoCard" src="${filme.imagem}"></div>
+                        <div class="card_content">
+                        <h2 class="card_title">${filme.titulo}</h2>
+                        <p class="card_text">${filme.nota}</p>
+                        <p class="card_text">${filme.genero}</p>
+                        <p class="card_text">${filme.sinopse}</p>
+                        
+                        <button class="btn card_btn">Editar</button>
+                        <button class="btn card_btn">Excluir</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section> 
 
     <footer id="rodape">
         <hr>

@@ -25,8 +25,8 @@ const getFilmes = async () => {
                         <p class="card_text">${filme.genero}</p>
                         <p class="card_text">${filme.sinopse}</p>
                         
-                        <button class="btn card_btn">Editar</button>
-                        <button class="btn card_btn">Excluir</button>
+                        <button class="btn card_btn" onclick="putFilme(${filme.id})>Editar</button>
+                        <button class="btn card_btn" onclick="deleteFilme(${filme.id})">Excluir</button>
                         </div>
                     </div>
                 </li>
