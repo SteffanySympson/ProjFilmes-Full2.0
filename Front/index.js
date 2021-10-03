@@ -85,10 +85,8 @@ const submitForm = async (evento) => {
         titulo: titulo.value,
         nota: nota.value,
         genero: genero.value,
-        resumo: resumo.value
+        resumo: resumo.value,
     }
-    
-
     
     //essa parte vai vai verificar se o botão de edição foi ou não acionado, ou seja, se está editando o card ou não, se não dispara o POST, se sim dispara o PUT.
     //o IF vai configurar a requisição antes que ela seja disparada.

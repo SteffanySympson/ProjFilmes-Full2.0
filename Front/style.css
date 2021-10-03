@@ -44,7 +44,7 @@ nav h1{
     text-decoration: none;
     color: rgb(255, 255, 255);
     text-shadow: #ffffff 1px 0;
-    font-size: 4rem;
+    font-size: 4.5rem;
     text-align: center;
     padding: 2rem; 
 }
@@ -59,7 +59,7 @@ section#novofilme{
 section#novofilme h2{
     text-align: right;
     color: #ffffff;
-    font-size: 3rem;
+    font-size: 2rem;
     text-shadow: .5px #ffffff;
     margin-top: 2rem;
     margin-bottom: .5rem;
