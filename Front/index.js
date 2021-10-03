@@ -59,7 +59,10 @@ const submitForm = async (evento) => {
         genero: genero.value,
         sinopse: sinopse.value
     }
+    console.log(sinopse);
+    console.log(filme);
 
+    
     //essa parte vai vai verificar se o botão de edição foi ou não acionado, ou seja, se está editando o card ou não, se não dispara o POST, se sim dispara o PUT.
     //o IF vai configurar a requisição antes que ela seja disparada.
     if(!edicao) { //SE
