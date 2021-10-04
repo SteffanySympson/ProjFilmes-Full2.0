@@ -22,12 +22,13 @@
 
     <hr id="linha1"></hr>
 
-    <section id="novofilme">
-        <h2>Cadastro de Novo Filme</h2>
+    <main>
+        <h2 class="tituloDois">Cadastro de Novo Filme</h2>
+       
         
-        <div class="container">
+        <section class="container" onsubmit="submitForm(event)"  id="form">
             <img src="popcorn.png" alt="" class="popcorn">
-            <form onsubmit="submitForm(event)" id="form">
+            <form class="form">
 
                 <div >
                     <label for="imagem" id="tituloForm">Imagem</label>
@@ -58,20 +59,21 @@
                     <button type="submit" class="btnSend" >Enviar</button>
                 </div>
             </form>
-        </div>
-        
-    </section>
-    <section>
-        <div class="main">
-            <ul class="cards" id="lista">
-            </ul>
-        </div>
-    </section> 
+        </section>
+    
+    
+        <section>
+            <div class="main">
+                <ul class="cards" id="lista">
+                </ul>
+            </div>
+        </section> 
+
+    </main>
 
     <footer id="rodape">
         <hr>
         <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script>All rights reserved  | <a target="_blank" href="https://portfoliossympson.herokuapp.com/">SS Developer</a></p>
-        
     </footer>
 
     <script src="index.js"></script>

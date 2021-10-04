@@ -56,7 +56,7 @@ section#novofilme{
     width: 100%;
 }
 
-section#novofilme h2{
+.tituloDois{
     text-align: right;
     color: #ffffff;
     font-size: 2rem;

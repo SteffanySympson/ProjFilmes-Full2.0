@@ -43,10 +43,6 @@ const getFilmes = async () => {
                                     <path d="M3.49371 4.22065L5.55387 0.79198" />
                                 </svg>
                             </label>
-
-
-
-
                             <p class="card_text">Nota: ${filme.nota}</p>
                             <p class="card_text">Gênero: ${filme.genero}</p>
                             <p class="card_text">Resumo: ${filme.resumo}</p>
@@ -85,7 +81,7 @@ const submitForm = async (evento) => {
         titulo: titulo.value,
         nota: nota.value,
         genero: genero.value,
-        resumo: resumo.value,
+        resumo: resumo.value
     }
     
     //essa parte vai vai verificar se o botão de edição foi ou não acionado, ou seja, se está editando o card ou não, se não dispara o POST, se sim dispara o PUT.
@@ -95,7 +91,8 @@ const submitForm = async (evento) => {
             method: 'POST', //definição do método da equisição, POST.
             body: JSON.stringify(filme), //Coloca em formato json e rendezina no corpo/tela.
             headers: new Headers({ 
-                'Content-Type': 'application/json'})
+                'Content-Type': 'application/json'
+            })
         })
 
         const response = await fetch(request);
@@ -103,6 +100,7 @@ const submitForm = async (evento) => {
         //essas constantes uma chamará a fetch (LEMBRANDO: devolve uma promessa de que algo será retornado, essa promessa é chamada de Promisse. Essa promessa pode tanto ser boa, ter retornado os dados, quanto ter falhado por algum motivo - como no caso da conexão com o servidor cair.), essa fetch é assincrona conforme as anteriores configurações. A função result vai pegar o resultado da Fetch e jogar no body em formato JSON.
 
         if(result) { //verifica se a API retornou alguma coisa, se tiver retornado, rendezina na página.
+            edicao = false;
             getFilmes();
         }
     } else { //SENÃO
@@ -111,12 +109,15 @@ const submitForm = async (evento) => {
             method: 'PUT',
             body: JSON.stringify(filme),
             headers: new Headers({ 
-                'Content-Type': 'application/json'})
+                'Content-Type': 'application/json'
+            })
         })
+
         const response = await fetch(request);
         const result = await response.json();
 
         if(result){
+            edicao = false;
             getFilmes();
         }
     }
@@ -148,18 +149,20 @@ const putFilme = async (id) => {
     const filme = await getFilmesById(id); //recebe o objeto de acordo com o ID dele.
 
     //salva os elementos (daí o final EL no nome da constante) para poder ser manipulado.
-    let imagemEl = document.getElementById('imagem');
-    let tituloEl = document.getElementById('titulo');
-    let notaEl = document.getElementById('nota');
-    let generoEl = document.getElementById('genero');
-    let resumoEl = document.getElementById('resumo'); 
+    let imagemElement = document.getElementById('imagem');
+    let tituloElement = document.getElementById('titulo');
+    let notaElement = document.getElementById('nota');
+    let generoElement = document.getElementById('genero');
+    let resumoElement = document.getElementById('resumo'); 
 
     //vai preencher os campos do html de acordo com o que estava no objeto.
-    imagemEl.value = filme.imagem;
-    tituloEl.value = filme.titulo;
-    notaEl.value = filme.nota;
-    generoEl.value = filme.genero;
-    resumoEl.value = filme.resumo;
+    imagemElement.value = filme.imagem;
+    tituloElement.value = filme.titulo;
+    notaElement.value = filme.nota;
+    generoElement.value = filme.genero;
+    resumoElement.value = filme.resumo;
+
+    edicao = false;
 }
 
 //Função para Excluir um filme pelo ID dele.
